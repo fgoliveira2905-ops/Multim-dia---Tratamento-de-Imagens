@@ -7,7 +7,7 @@ img = np.array(Image.open('imagens/monarch.ppm').convert('RGB'))
 cores = ["red","green","blue"]
 nomes = ['R','G','B']
 
-plt.figure(figsize=(10,10))
+plt.figure(figsize=(7,7))
 for c in range(3):
     h = np.bincount(img[:,:,c].ravel(), minlength=256)
     plt.plot(h, color=cores[c], label=nomes[c])
